@@ -19,7 +19,7 @@ jobs:
     steps:
     - name: Set env
       run: |
-        echo "RELEASE_VERSION=1.3.4" >> $GITHUB_ENV 
+        echo "RELEASE_VERSION=1.3.3" >> $GITHUB_ENV 
 
     - name: git clone vyos-build
       run: |
@@ -33,7 +33,7 @@ jobs:
         
         ./configure \
           --architecture amd64 \
-          --build-by ayoyama@gmail.com \
+          --build-by jagoanteknoku@gmail.com \
           --build-type release \
           --version ${{ env.RELEASE_VERSION }}
 
